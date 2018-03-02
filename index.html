@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pixel Art Maker!</title>
+    <link href="https://fonts.googleapis.com/css?family=Delius|Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lab: Pixel Art Maker</h1>
+        <hr>
+    </header>
+    <div class="main">
+        <h2>Choose Grid Size</h2>
+        <form id="sizePicker">
+            Grid Height:
+            <input type="number" id="inputHeight" name="height" min="1" value="20"> Grid Width:
+            <input type="number" id="inputWeight" name="width" min="1" value="20">
+            <input type="submit" id="submit">
+        </form>
+
+        <label for="colorPicker">Pick A Color:</label>
+        <input type="color" id="colorPicker">
+        <br>
+        <label for="range">Size of the cells</label>
+        <input type="range" id="range" min="20" max="50" value="20">
+
+        <h2>Design Canvas</h2>
+        <table id="pixelCanvas"></table>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/designs.js"></script>
+</body>
+
+</html>

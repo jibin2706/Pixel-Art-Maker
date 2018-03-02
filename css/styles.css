@@ -1,0 +1,61 @@
+body,
+html {
+  margin: 0;
+}
+
+body {
+  text-align: center;
+  font-family: "Delius";
+  font-size: 18px;
+  color: white;
+  background: #051a38;
+}
+
+h1 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 50px;
+  margin: 0.5em;
+}
+
+h2 {
+  margin: 1em 0 0.25em;
+}
+
+h2:first-of-type {
+  margin-top: 0.5em;
+}
+
+table,
+tr,
+td {
+  border: 1px solid white;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+tr {
+  height: 20px;
+}
+
+td {
+  width: 20px;
+}
+
+input[type="number"],
+input[type="submit"] {
+  width: 6em;
+  border: none;
+  background-color: white;
+  padding: 4px 10px;
+}
+
+input[type="number"]:focus {
+  border: 2px solid #000000;
+}
+
+input {
+  margin-top: 1em;
+}
