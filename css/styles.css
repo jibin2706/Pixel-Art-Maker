@@ -61,7 +61,8 @@ input {
 }
 
 /* validation */
-input:invalid{
-  color:red;
+
+input:invalid {
+  color: red;
   font-weight: bolder;
 }

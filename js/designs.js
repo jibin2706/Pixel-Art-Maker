@@ -8,8 +8,11 @@ function makeGrid() {
     const height = $("#inputHeight").val();
     const width = $("#inputWeight").val();
     const table = $("#pixelCanvas");
-    for (let i = 0; i < height; i++) table.append('<tr class="button"></tr>');
-    for (let j = 0; j < width; j++) $(".button").append("<td></td>");
+    
+    for (let i = 0; i < height; i++)
+        table.append('<tr class="button"></tr>');
+    for (let j = 0; j < width; j++)
+        $(".button").append("<td></td>");
 }
 
 $("#pixelCanvas").on("click", "td", function () {
