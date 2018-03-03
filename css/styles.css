@@ -6,19 +6,20 @@ html {
 body {
   text-align: center;
   font-family: "Delius";
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   background: #051a38;
 }
 
 h1 {
   font-family: "Press Start 2P", cursive;
-  font-size: 50px;
+  font-size: 2em;
   margin: 0.5em;
 }
 
 h2 {
-  margin: 1em 0 0.25em;
+  font-size: 1.6em;
+  margin: 0.5em 0;
 }
 
 h2:first-of-type {
@@ -58,6 +59,11 @@ input[type="number"]:focus {
 
 input {
   margin-top: 1em;
+}
+
+label{
+  cursor: pointer;
+  margin-left: 2em;
 }
 
 /* validation */
