@@ -16,18 +16,18 @@
         <h2>Choose Grid Size</h2>
         <form id="sizePicker">
             Grid Height:
-            <input type="number" id="inputHeight" name="height" min="1" value="20"> Grid Width:
-            <input type="number" id="inputWeight" name="width" min="1" value="20">
-            <input type="submit" id="submit">
+            <input type="number" id="inputHeight" name="height" min="1" max="30" value="10" required> Grid Width:
+            <input type="number" id="inputWeight" name="width" min="1" max="30" value="10" required>
+            <input type="submit">
         </form>
 
         <label for="colorPicker">Pick A Color:</label>
         <input type="color" id="colorPicker">
         <br>
         <label for="range">Size of the cells</label>
-        <input type="range" id="range" min="20" max="50" value="20">
+        <input type="range" id="range" min="10" max="30" value="20">
 
-        <h2>Design Canvas</h2>
+        <h2>Canvas</h2>
         <table id="pixelCanvas"></table>
     </div>
 

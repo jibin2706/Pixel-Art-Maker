@@ -59,3 +59,9 @@ input[type="number"]:focus {
 input {
   margin-top: 1em;
 }
+
+/* validation */
+input:invalid{
+  color:red;
+  font-weight: bolder;
+}
