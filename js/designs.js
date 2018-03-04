@@ -1,5 +1,5 @@
 // function to generate random values in rgb(no,no,no)
-const randomcolor = no => Math.floor(Math.random() * no);
+const randomNumber = no => Math.floor(Math.random() * no);
 
 let color, rainbow;
 
@@ -42,6 +42,11 @@ $("#range").change(function () {
     $("tr").css("height", value);
 });
 
+// double click to delete the color
+$("#pixelCanvas").on("dblclick","td",function(){
+    $(this).css("background-color","unset");
+});
+
 // change color on moving the mouse around the canvas
 $("#pixelCanvas").on("mouseover", "td", function () {
     // drag == true if checkbox is checked else undefined
@@ -49,7 +54,7 @@ $("#pixelCanvas").on("mouseover", "td", function () {
 
     // rainbow == true if checkbox is checked else undefined
     if (rainbow)
-        color = `rgb(${randomcolor(255)},${randomcolor(255)},${randomcolor(255)})`;
+        color = `rgb(${randomNumber(255)},${randomNumber(255)},${randomNumber(255)})`;
     else
         color = $("#colorPicker").val();
 
