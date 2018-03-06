@@ -1,7 +1,16 @@
-// function to generate random values in rgb(no,no,no)
+let color, rainbow;
+
 const randomNumber = no => Math.floor(Math.random() * no);
 
-let color, rainbow;
+// function to generate random values in rgb(no,no,no)
+const selectColor = () => {
+    if (rainbow)
+        color = `rgb(${randomNumber(255)},${randomNumber(255)},${randomNumber(255)})`;
+    else
+        color = $("#colorPicker").val();
+    return color;
+}
+
 
 // checks whether to apply random color on every click or not
 $("#rainbow").change(function () {
@@ -30,7 +39,7 @@ function makeGrid() {
 
 // color or each click on td
 $("#pixelCanvas").on("click", "td", function () {
-    $(this).css("background-color", color);
+    $(this).css("background-color", selectColor());
 });
 
 // to change to width and height of the td
@@ -43,21 +52,20 @@ $("#range").change(function () {
 });
 
 // double click to delete the color
-$("#pixelCanvas").on("dblclick","td",function(){
-    $(this).css("background-color","unset");
+$("#pixelCanvas").on("dblclick", "td", function () {
+    $(this).css("background-color", "unset");
 });
 
-// change color on moving the mouse around the canvas
-$("#pixelCanvas").on("mouseover", "td", function () {
-    // drag == true if checkbox is checked else undefined
-    const drag = $("#drag:checked").val();
+let drag = false;
+$("#pixelCanvas").on("mousedown", "td", function () {
+    drag = true;
+    $("#pixelCanvas").on("mouseup", "td", function () {
+        drag = false;
+    })
+});
 
-    // rainbow == true if checkbox is checked else undefined
-    if (rainbow)
-        color = `rgb(${randomNumber(255)},${randomNumber(255)},${randomNumber(255)})`;
-    else
-        color = $("#colorPicker").val();
-
+$("#pixelCanvas").on("mouseenter", "td", function () {
     if (drag)
-        $(this).css("background-color", color);
+        $(this).css("background-color", selectColor());
+
 });
