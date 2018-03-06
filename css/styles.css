@@ -1,3 +1,8 @@
+:root {
+  --color1: #daad86;
+  --color2: #1d2120;
+}
+
 body,
 html {
   margin: 0;
@@ -7,29 +12,35 @@ body {
   text-align: center;
   font-family: "Delius";
   font-size: 16px;
-  color: white;
-  background: #0e2f44;
+  background: var(--color1);
+  color: var(--color2);
+}
+
+header {
+  background: var(--color2);
+  color: var(--color1);
+  padding: 2em 0em;
 }
 
 h1 {
   font-family: "Press Start 2P", cursive;
   font-size: 2em;
-  margin: 0.5em;
 }
 
 h2 {
   font-size: 1.6em;
-  margin: 0.5em 0;
+  margin: 0;
+  padding: 1em 0;
 }
 
-h2:first-of-type {
-  margin-top: 0.5em;
+main {
+  margin: 0 0 6em;
 }
 
-table,
-tr,
-td {
-  border: 1px solid white;
+table {
+  border: 1px solid var(--color2);
+  background-color: var(--color2);
+  box-shadow: 11px 11px 11px 0px rgba(50, 50, 50, 1);
 }
 
 table {
@@ -38,11 +49,11 @@ table {
 }
 
 tr {
-  height: 20px;
+  height: 10px;
 }
 
 td {
-  width: 20px;
+  width: 10px;
 }
 
 input[type="number"],

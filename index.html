@@ -10,26 +10,23 @@
 <body>
     <header>
         <h1>Lab: Pixel Art Maker</h1>
-        <hr>
     </header>
-    <div class="main">
+    <main>
         <h2>Choose Grid Size</h2>
         <form id="sizePicker">
             Grid Height:
-            <input type="number" id="inputHeight" name="height" min="10" max="50" value="20" required> Grid Width:
-            <input type="number" id="inputWeight" name="width" min="10" max="50" value="20" required>
-            <input type="submit">
+            <input type="number" id="inputHeight" name="height" min="10" max="100" value="50" required> Grid Width:
+            <input type="number" id="inputWeight" name="width" min="10" max="100" value="100" required>
+            <input type="submit" value="Generate">        
         </form>
 
         <h2>Options</h2>
-        <label for="drag">Drag and color:</label>
-        <input type="checkbox" id="drag">
 
         <label for="rainbow">Rainbow</label>
         <input type="checkbox" id="rainbow">
 
         <label for="colorPicker">Pick A Color:</label>
-        <input type="color" id="colorPicker">
+        <input type="color" id="colorPicker" value="#ffffff">
         <!-- <br> -->
 
         <label for="range">Size of the cells</label>
@@ -37,7 +34,7 @@
 
         <h2>Canvas</h2>
         <table id="pixelCanvas"></table>
-    </div>
+    </main>
 
     <script src="js/jquery.js"></script>
     <script src="js/designs.js"></script>
