@@ -42,15 +42,6 @@ $("#pixelCanvas").on("click", "td", function () {
     $(this).css("background-color", selectColor());
 });
 
-// to change to width and height of the td
-$("#range").change(function () {
-    const value = $("#range").val();
-    console.log(value);
-    $("td").css("width", value);
-    $("td").css("height", value);
-    $("tr").css("height", value);
-});
-
 // double click to delete the color
 $("#pixelCanvas").on("dblclick", "td", function () {
     $(this).css("background-color", "unset");

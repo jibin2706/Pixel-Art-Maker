@@ -5,6 +5,7 @@
     <title>Pixel Art Maker!</title>
     <link href="https://fonts.googleapis.com/css?family=Delius|Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -14,10 +15,10 @@
     <main>
         <h2>Choose Grid Size</h2>
         <form id="sizePicker">
-            Grid Height:
-            <input type="number" id="inputHeight" name="height" min="10" max="100" value="50" required> Grid Width:
-            <input type="number" id="inputWeight" name="width" min="10" max="100" value="100" required>
-            <input type="submit" value="Generate">        
+            Height:
+            <input type="text" id="inputHeight" name="height" min="10" max="100" value="50" pattern="[0-9]*" required> Width:
+            <input type="text" id="inputWeight" name="width" min="10" max="100" value="100" pattern="[0-9]*" required> <br>
+            <input type="submit" value="Generate">
         </form>
 
         <h2>Options</h2>
@@ -29,12 +30,13 @@
         <input type="color" id="colorPicker" value="#ffffff">
         <!-- <br> -->
 
-        <label for="range">Size of the cells</label>
-        <input type="range" id="range" min="10" max="30" value="20">
-
         <h2>Canvas</h2>
         <table id="pixelCanvas"></table>
     </main>
+    
+    <div class="error">
+        <h2>Not available for mobiles and tablets</h2>
+    </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/designs.js"></script>
