@@ -1,6 +1,7 @@
 :root {
-  --color1: #daad86;
-  --color2: #1d2120;
+  --color1: #444140;
+  --color2: #1d2120;  
+  --font-color: #F7EBE8;
 }
 
 body,
@@ -14,12 +15,11 @@ body {
   font-family: "Delius",sans-serif  ;
   font-size: 16px;
   background: var(--color1);
-  color: var(--color2);
+  color: var(--font-color);
 }
 
 header {
   background: var(--color2);
-  color: var(--color1);
   padding: 2em 0em;
 }
 
@@ -65,17 +65,16 @@ input[type="submit"] {
 
 input[type="submit"] {
   background-color: var(--color2);
-  color: var(--color1);
+  color: var(--font-color);
   margin-top: 1em;
   padding: 1em 5em;
   border: 1px solid var(--color2);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
 }
 
 input[type="submit"]:hover{
   background-color: var(--color1);
-  color: var(--color2);
   border: 1px solid var(--color2);
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
 }
 
 input[type="text"]:focus {
@@ -85,7 +84,6 @@ input[type="text"]:focus {
 
 input[type="submit"]:active {
   background-color: var(--color1);
-  color: var(--color2);
   border: 1px solid var(--color2);
   box-shadow: none;
 }
